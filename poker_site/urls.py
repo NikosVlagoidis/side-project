@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from poker_site.poker.views import index
+from poker_site.poker.views import index, pdf_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'accounts/', include('allauth.urls')),
+    url(r'pdf/', pdf_view),
     url(r'^$', index),
     ]

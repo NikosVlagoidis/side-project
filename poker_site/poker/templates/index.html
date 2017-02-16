@@ -26,6 +26,24 @@
 {% else %}
 <h1> Hello you are logged in as {{ user.username }}  <h1>
     <a href="accounts/logout" class="btn btn-lg btn-primary btn-block" data-toggle="modal">Log out</a>
+    <a href="#pdf" class="btn btn-lg btn-warning" data-toggle="modal"> Link to your PDF</a>
+
+
+    <!-- Modal for Login Form -->
+
+           <div id="pdf" class="modal fade">
+
+
+                      <div class="modal-body">
+                          <iframe  scrolling="no" src="pdf" height="750" width="750" style="border:none;"></iframe>
+
+                      </div>
+            </div>
+
+
+
+
+
 
      {% endif %}
 
